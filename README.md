@@ -11,7 +11,7 @@ DEVICE=$2
 HID_DRV_PATH=/sys/bus/hid/drivers
 /sbin/modprobe hid_udraw_ps3_standalone
 echo ${DEVICE} > ${HID_DRV_PATH}/hid-generic/unbind
-echo ${DEVICE} > ${HID_DRV_PATH}/hid-udraw-ps3/bind
+echo ${DEVICE} > ${HID_DRV_PATH}/hid-udraw/bind
 ```
 
 Create a `/etc/udev/rules.d/80-udraw.rules` file with the content:
